@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout - Hapus Baag</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+    <h2>Checkout 💳</h2>
+
+    <form onsubmit="placeOrder(event)">
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Address (Pune Only)</label>
+            <textarea class="form-control" id="address" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Mobile Number</label>
+            <input type="tel" class="form-control" id="mobile" required>
+        </div>
+
+        <button class="btn btn-success">Place Order</button>
+    </form>
+</div>
+
+<script>
+function placeOrder(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let total = cart.price * cart.quantity;
+
+    let message = `Hello, my name is ${name}. I want to order ${cart.quantity} box of ${cart.weight}. Total amount ₹${total}. My mobile number is ${mobile}.`;
+
+    window.open(`https://wa.me/919689376295?text=${encodeURIComponent(message)}`);
+
+    localStorage.removeItem("cart");
+}
+</script>
+
+</body>
+</html>
