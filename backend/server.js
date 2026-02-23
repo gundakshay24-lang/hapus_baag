@@ -13,16 +13,11 @@ console.log("Server file is running...");
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+app.use(express.static(path.join(__dirname, "public")));
 
 
-app.use(cors({
-    origin: ["http://127.0.0.1:5500", "http://localhost:5500"]
-}));
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -115,6 +110,10 @@ app.get("/orders", (req, res) => {
         if (err) return res.status(400).json({ error: err.message });
         res.json(rows);
     });
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Place order
@@ -262,7 +261,6 @@ app.get("/invoice/:id", async (req, res) => {
             .fillColor("black")
             .text(`Name: ${order.name}`)
             .text(`Phone: ${order.phone}`)
-            .text(`Address: ${order.address}`);
 
         doc.moveDown(2);
 
@@ -346,3 +344,7 @@ app.get("/invoice/:id", async (req, res) => {
 
 /* ================= START SERVER ================= */
 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
