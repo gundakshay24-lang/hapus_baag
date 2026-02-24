@@ -7,7 +7,6 @@ const path = require("path");
 const multer = require("multer");
 const cors = require("cors");
 const QRCode = require("qrcode");
-const path = require("path");
 
 const app = express();
 
