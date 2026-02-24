@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,4 +59,66 @@ async function initMap() {
 window.onload = initMap;
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Map - Hapus Baag</title>
+    <link 
+      rel="stylesheet" 
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+      crossorigin=""
+    />
+    <style>
+        body { margin:0; padding:0; font-family: Arial, sans-serif; }
+        #map { height: 90vh; width: 100%; }
+        h2 { text-align: center; margin: 10px 0; }
+    </style>
+</head>
+<body>
+<h2>Customer Delivery Locations</h2>
+<div id="map"></div>
+
+<script 
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+  crossorigin="">
+</script>
+<script>
+const API_BASE = "http://localhost:5000"; // Your backend URL
+
+async function initMap() {
+    // Fetch all orders
+    const res = await fetch(`${API_BASE}/orders`);
+    const orders = await res.json();
+
+    // Default map center (Ratnagiri region)
+    const map = L.map('map').setView([16.9915, 73.3120], 8);
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add markers for each order
+    orders.forEach(order => {
+        if(order.latitude && order.longitude){
+            const marker = L.marker([order.latitude, order.longitude]).addTo(map);
+            marker.bindPopup(`
+                <b>${order.name}</b><br>
+                Mango: ${order.mangoType}<br>
+                Qty: ${order.quantity}<br>
+                Distance: ${order.distance} km<br>
+                Total: ₹${order.grandTotal}
+            `);
+        }
+    });
+}
+
+// Initialize map on page load
+window.onload = initMap;
+</script>
+</body>
+>>>>>>> 398ef208559db0c860f01652908cef6306231ee4
 </html>

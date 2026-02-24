@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===== BODY BACKGROUND ===== */
 body {
     background: #fffdf5; /* Light mango cream color */
@@ -167,4 +168,175 @@ html {
 .badge {
     font-size: 14px;
     margin: 5px;
+=======
+/* ===== BODY BACKGROUND ===== */
+body {
+    background: #fffdf5; /* Light mango cream color */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ================= HERO ORCHARD SECTION ================= */
+
+/* UPDATED CLASS NAME TO MATCH YOUR HTML */
+.hero-intro {
+    background: url('images/orchard-bg.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 80px 20px;
+}
+
+/* Dark overlay for text readability */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 60px;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Hero Text Styling */
+.hero-overlay h1 {
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+.hero-overlay p {
+    color: #f8f9fa;
+    font-size: 18px;
+}
+
+
+/* ===== PRODUCT SECTION ===== */
+.product-bg {
+    background: linear-gradient(to right, #fff7cc, #ffffff);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+
+/* ===== VARIETIES SECTION ===== */
+.varieties-bg {
+    background: #f8fff4;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+
+/* ===== ABOUT BACKGROUND ===== */
+.about-bg {
+    background: linear-gradient(to right, #fffaf0, #f8fff4);
+}
+
+
+/* ===== PROCESS BOX ===== */
+.process-box {
+    background: #ffffff;
+    transition: 0.3s;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.process-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/* ===== COUNTER SECTION ===== */
+.counter-section h2 {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+/* ===== WHY CHOOSE US ===== */
+.why-bg {
+    background: linear-gradient(to right, #28a745, #1e7e34);
+    color: white;
+}
+
+
+/* ===== FOOTER ===== */
+.footer-bg {
+    background: #1c1c1c;
+    color: #ffffff;
+}
+
+
+/* ===== CARD HOVER EFFECT ===== */
+.card {
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===== PRODUCT CARD CUSTOM ===== */
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+
+/* ===== BUTTON IMPROVEMENTS ===== */
+.btn-warning {
+    background: #ffb703;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background: #ffa200;
+}
+
+.btn-success {
+    font-weight: 600;
+}
+
+
+/* ===== BADGES STYLING ===== */
+.badge {
+    font-size: 14px;
+    margin: 5px;
+>>>>>>> 398ef208559db0c860f01652908cef6306231ee4
 }

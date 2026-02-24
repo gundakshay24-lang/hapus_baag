@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -438,4 +439,446 @@
 
 <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hapus Baag - Organic Mango</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#home" ondblclick="openAdminLogin()">
+      <img src="images/Hapus Logo.jpg" height="50" class="me-2">
+      <span class="fw-bold text-success">Hapus Baag</span>
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="#varieties">Varieties</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="#product">Order</a>
+        </li>
+
+        <li class="nav-item ms-lg-3">
+          <a href="cart.html" class="btn btn-warning">🛒 Cart</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= HERO / INTRO SECTION ================= -->
+<section id="home" class="hero-intro text-black text-center d-flex align-items-center">
+  <div class="hero-overlay">
+    <h1 class="display-4 fw-bold">Experience the Real Taste of Konkan Hapus</h1>
+    <p class="lead mt-3">
+      Naturally Ripened • Farm Fresh • Direct from Devgad & Ratnagiri Orchards
+    </p>
+
+    <div class="mt-4">
+      <a href="#product" class="btn btn-warning btn-lg me-3">Order Now</a>
+      <a href="https://wa.me/919689376295" class="btn btn-success btn-lg">WhatsApp Order</a>
+    </div>
+
+    <div class="mt-4">
+      <span class="badge bg-success p-2">🚚 Free Delivery in Pune</span>
+      <span class="badge bg-warning text-dark p-2">🌿 100% Natural</span>
+      <span class="badge bg-light text-dark p-2">⭐ Premium Quality</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Mango Varieties Section -->
+<section id="varieties" class="py-5 bg-light fade-up">
+  <div class="container">
+    <h2 class="text-center fw-bold text-success mb-5">Our Premium Mango Varieties</h2>
+
+    <div class="row g-4">
+
+      <!-- 1️⃣ Devgad Alphonso -->
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="images/Alphonso.jpg" class="img-fluid">
+          <div class="product-info">
+            <h5>Devgad Alphonso</h5>
+            <p>GI tagged authentic Devgad Hapus with rich sweetness.</p>
+            <h6 class="text-success">₹1200 / Box</h6>
+            <button class="btn btn-success w-100 mt-2" onclick="addToCartWithData('Devgad Alphonso',1200)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2️⃣ Ratnagiri dasheri -->
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="images/Dasheri.jpg" class="img-fluid">
+          <div class="product-info">
+            <h5>Ratnagiri Dasheri</h5>
+            <p>Premium export quality mangoes from Ratnagiri farms.</p>
+            <h6 class="text-success">₹1100 / Box</h6>
+            <button class="btn btn-success w-100 mt-2" onclick="addToCartWithData('Ratnagiri Alphonso',1100)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3️⃣ Organic keshar -->
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="images/keshar.jpg" class="img-fluid">
+          <div class="product-info">
+            <h5>Organic keshar</h5>
+            <p>100% chemical-free naturally ripened mangoes.</p>
+            <h6 class="text-success">₹1400 / Box</h6>
+            <button class="btn btn-success w-100 mt-2" onclick="addToCartWithData('Organic Alphonso',1400)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4️⃣ Premium Langra -->
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="images/langra.jpg" class="img-fluid">
+          <div class="product-info">
+            <h5>Premium Jumbo Langra</h5>
+            <p>Hand-picked large size mangoes with extra pulp.</p>
+            <h6 class="text-success">₹1600 / Box</h6>
+            <button class="btn btn-success w-100 mt-2" onclick="addToCartWithData('Premium Jumbo Alphonso',1600)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   <!-- ================= PLACE ORDER SECTION ================= -->
+<section id="product" class="container my-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-success">Place Your Order</h2>
+    <p class="text-muted">Fresh Hapus Mango Delivered from Kharadi, Pune</p>
+  </div>
+
+  <div class="row">
+
+    <!-- LEFT SIDE : IMAGE + MAP -->
+    <div class="col-md-6 mb-4">
+
+      <!-- Mango Image -->
+      <div class="text-center mb-3">
+        <img src="images/Alphonso.jpg" 
+             class="img-fluid rounded shadow" 
+             alt="Mango">
+      </div>
+      <select id="puneArea"
+        class="form-select mb-3"
+        onchange="selectPuneArea()">
+
+        <option value="">-- Select Your Area in Pune --</option>
+        <option value="18.5515,73.9420">Kharadi</option>
+        <option value="18.5204,73.8567">Shivajinagar</option>
+        <option value="18.5089,73.9250">Hadapsar</option>
+        <option value="18.5912,73.7389">Hinjewadi</option>
+        <option value="18.5091,73.8077">Kothrud</option>
+        <option value="18.4955,73.9289">Magarpatta</option>
+        <option value="18.5636,73.7758">Baner</option>
+        <option value="18.5074,73.7898">Warje</option>
+        <option value="18.5167,73.8417">Swargate</option>
+        <option value="18.5308,73.8475">Camp</option>
+      </select>
+
+      <!-- Delivery Map -->
+
+      <div>
+        <label class="fw-bold mb-2">Select Delivery Location</label>
+
+        <div id="map"
+             style="height:350px; width:100%; border-radius:12px;"
+             class="shadow">
+        </div>
+
+        <small class="text-danger d-block mt-2">
+          Drag the marker exactly to your house location.
+        </small>
+
+        <input type="hidden" id="latitude">
+        <input type="hidden" id="longitude">
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE : ORDER FORM -->
+    <div class="col-md-6">
+      <form id="orderForm">
+
+        <!-- Mango Type -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Select Mango Type</label>
+          <select class="form-select" id="mangoType" onchange="calculateTotal()">
+            <option value="Premium Alphonso">Premium Alphonso</option>
+            <option value="Ratnagiri Hapus">Ratnagiri Hapus</option>
+            <option value="Devgad Special">Devgad Special</option>
+            <option value="Organic Farm Mango">Organic Farm Mango</option>
+          </select>
+        </div>
+
+        <!-- Weight -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Select Weight (kg)</label>
+          <select class="form-select" id="weight" onchange="calculateTotal()">
+            <option value="1">1 kg</option>
+            <option value="5">5 kg</option>
+            <option value="10">10 kg</option>
+          </select>
+        </div>
+
+        <!-- Quantity -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Quantity</label>
+          <input type="number" id="quantity"
+                 class="form-control"
+                 value="1"
+                 min="1"
+                 onchange="calculateTotal()">
+        </div>
+
+        <!-- Customer Name -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Full Name</label>
+          <input type="text" id="customerName"
+                 class="form-control"
+                 required>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Phone Number</label>
+          <input type="tel" id="phone"
+                 class="form-control"
+                 required>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Delivery Address</label>
+          <textarea id="address"
+                    class="form-control"
+                    rows="2"
+                    placeholder="Enter complete delivery address"
+                    required></textarea>
+        </div>
+
+        <!-- Distance Info -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">
+            Distance from Kharadi
+          </label>
+          <input type="text"
+                 id="distance"
+                 class="form-control"
+                 readonly>
+          <small class="text-muted">
+            Free delivery within 10 km. ₹10 per km after 10 km.
+          </small>
+        </div>
+
+        <!-- Totals -->
+        <div class="border rounded p-3 mb-3 bg-light">
+          <h6>Product Total: ₹<span id="productTotal">0</span></h6>
+          <h6>Delivery Charge: ₹<span id="deliveryCharge">0</span></h6>
+          <h5 class="fw-bold mt-2">
+            Grand Total: ₹<span id="totalPrice">0</span>
+          </h5>
+        </div>
+
+        <div class="d-grid">
+          <button type="button"
+                  class="btn btn-success btn-lg"
+                  onclick="sendWhatsAppOrder()">
+            Order on WhatsApp
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="about-bg py-5">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">About Hapus Baag</h2>
+      <p class="text-muted">Premium Alphonso Mangoes Direct From Farms</p>
+    </div>
+
+    <!-- 🌿 Farm Story -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-4">
+        <img src="images/mango_farm.jfif" class="img-fluid rounded shadow" alt="Farm">
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bold text-warning">🌿 Our Farm Story</h4>
+        <p>
+          Hapus Baag was started with a mission to deliver authentic Devgad & Ratnagiri
+          Alphonso mangoes directly from farms to customers.
+        </p>
+        <p>
+          Our mangoes are naturally ripened, chemical-free, and handpicked to ensure
+          premium quality in every box.
+        </p>
+      </div>
+    </div>
+
+    <!-- 👨‍🌾 Founder Message -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6 mb-4">
+        <img src="images/founder.jpg" class="img-fluid rounded shadow" alt="Founder">
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bold text-warning">👨‍🌾 Founder Message</h4>
+        <p>
+          "Our goal is to bring the real taste of Konkan mangoes to every home.
+          We believe in honesty, freshness, and customer satisfaction."
+        </p>
+        <p class="fw-bold">– Akshay Gund, Founder</p>
+      </div>
+    </div>
+
+    <!-- 📦 Our Process -->
+    <div class="text-center mb-4">
+      <h4 class="fw-bold text-warning">📦 Our Process</h4>
+    </div>
+
+    <div class="row text-center mb-5">
+      <div class="col-md-3">
+        <div class="process-box p-3 shadow-sm rounded">
+          <h5>🌳 Farm Growing</h5>
+          <p>Natural farming without chemicals.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="process-box p-3 shadow-sm rounded">
+          <h5>✋ Hand Picking</h5>
+          <p>Carefully selected premium mangoes.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="process-box p-3 shadow-sm rounded">
+          <h5>📦 Quality Packing</h5>
+          <p>Safe and hygienic packaging.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="process-box p-3 shadow-sm rounded">
+          <h5>🚚 Fast Delivery</h5>
+          <p>Delivered fresh to your doorstep.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ Customer Trust -->
+    <div class="text-center mb-4">
+      <h4 class="fw-bold text-warning">⭐ Customer Trust</h4>
+      <p>Trusted by hundreds of happy customers in Pune</p>
+    </div>
+
+    <!-- 📊 Experience Counter -->
+    <div class="row text-center counter-section">
+      <div class="col-md-3">
+        <h2 class="counter" data-target="5">5+</h2>
+        <p>Years Experience</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="1200">1000+</h2>
+        <p>Happy Customers</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="3500">500+</h2>
+        <p>Boxes Delivered</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="counter" data-target="100">100</h2>
+        <p>% Natural</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-bg text-white py-5">
+>
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4">Why Choose Hapus Baag?</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>🌿 100% Natural</h5>
+        <p>Chemical free naturally ripened mangoes.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>🚚 Fast Delivery</h5>
+        <p>Fresh mangoes delivered to your doorstep in Pune.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>⭐ Premium Quality</h5>
+        <p>Direct from Devgad & Ratnagiri farms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-bg text-white text-center p-4">
+>
+  <p class="mb-1">© 2026 Hapus Baag | Pune</p>
+  <p class="mb-0">WhatsApp Orders: 9689376295</p>
+  <p class="mb-3">all content are reserved,to site owner,
+    DEVELOPED BY AKSHAY GUND</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+>>>>>>> 398ef208559db0c860f01652908cef6306231ee4
 </html>
